@@ -25,18 +25,13 @@ cat > /opt/traccar/conf/traccar.xml << EOF
     <entry key='database.url'>jdbc:mysql://localhost/traccar?zeroDateTimeBehavior=round&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
     <entry key='database.user'>root</entry>
     <entry key='database.password'>root</entry>
+    <entry key='topin.port'>5199</entry>
 
 </properties>
 EOF
 
 service traccar start
 
-
 sudo ufw allow 8082/tcp
+sudo ufw allow 5199/tcp
 sudo ufw status verbose
-
-
---
-AT+EGMR=1,7,"111000000004477"
-AT+CGSN
---
