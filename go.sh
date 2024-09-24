@@ -4,7 +4,7 @@ sudo timedatectl set-timezone Europe/Amsterdam
 
 sudo apt update && sudo apt -y install unzip mysql-server
 
-MYSQL_PASSWORD="h3llo"
+MYSQL_PASSWORD="nTioTFIRHyXNQEfyqDiC4I"
 sudo mysql -u root --execute="ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '${MYSQL_PASSWORD}'; GRANT ALL ON *.* TO 'root'@'localhost' WITH GRANT OPTION; FLUSH PRIVILEGES; CREATE DATABASE traccar;"
 
 wget https://www.traccar.org/download/traccar-linux-64-latest.zip
